@@ -9,10 +9,7 @@ fn main() {
                 .collect::<Vec<u16>>()
         })
         .expect("Unable to open file");
-    println!(
-        "{:?}",
-        depth_increases(depths)
-    );
+    println!("{:?}", depth_increases(depths));
 }
 
 fn depth_increases(depths: Vec<u16>) -> usize {
@@ -25,6 +22,9 @@ mod test {
 
     #[test]
     fn test1() {
-        assert_eq!(depth_increases(vec![199, 200, 208, 210, 200, 207, 240, 269, 260, 263]), 7)
+        assert_eq!(
+            depth_increases(vec![199, 200, 208, 210, 200, 207, 240, 269, 260, 263]),
+            7
+        )
     }
 }
